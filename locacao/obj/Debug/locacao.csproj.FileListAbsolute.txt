@@ -1,0 +1,11 @@
+C:\Users\Thiago\Desktop\Trabalho-Construcao-Projetos-TI\locacao\locacao\obj\Debug\locacao.csprojAssemblyReference.cache
+C:\Users\Thiago\Desktop\Trabalho-Construcao-Projetos-TI\locacao\locacao\obj\Debug\locacao.FormFuncionario.resources
+C:\Users\Thiago\Desktop\Trabalho-Construcao-Projetos-TI\locacao\locacao\obj\Debug\locacao.FormPrincipal.resources
+C:\Users\Thiago\Desktop\Trabalho-Construcao-Projetos-TI\locacao\locacao\obj\Debug\locacao.Properties.Resources.resources
+C:\Users\Thiago\Desktop\Trabalho-Construcao-Projetos-TI\locacao\locacao\obj\Debug\locacao.csproj.GenerateResource.cache
+C:\Users\Thiago\Desktop\Trabalho-Construcao-Projetos-TI\locacao\locacao\obj\Debug\locacao.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\Desktop\Trabalho-Construcao-Projetos-TI\locacao\locacao\bin\Debug\locacao.exe.config
+C:\Users\Thiago\Desktop\Trabalho-Construcao-Projetos-TI\locacao\locacao\bin\Debug\locacao.exe
+C:\Users\Thiago\Desktop\Trabalho-Construcao-Projetos-TI\locacao\locacao\bin\Debug\locacao.pdb
+C:\Users\Thiago\Desktop\Trabalho-Construcao-Projetos-TI\locacao\locacao\obj\Debug\locacao.exe
+C:\Users\Thiago\Desktop\Trabalho-Construcao-Projetos-TI\locacao\locacao\obj\Debug\locacao.pdb
