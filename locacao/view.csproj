@@ -153,9 +153,9 @@
     <None Include="Resources\50-Beautiful-and-Minimalist-Presentation-Backgrounds-07.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\model\model.csproj">
-      <Project>{9cde91d1-5b76-4447-a506-d05f79b44d30}</Project>
-      <Name>model</Name>
+    <ProjectReference Include="..\modelo\Modelo.csproj">
+      <Project>{f01d103c-c27c-48e3-9a27-d3cd73a1e717}</Project>
+      <Name>Modelo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
