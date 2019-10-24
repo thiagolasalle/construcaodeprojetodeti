@@ -43,3 +43,6 @@ C:\Users\aluno.unilasalle\Desktop\construcaodeprojetodeti\locacao\obj\Debug\loca
 C:\Users\aluno.unilasalle\Desktop\construcaodeprojetodeti\locacao\obj\Debug\locacao.Properties.Resources.resources
 C:\Users\aluno.unilasalle\Desktop\construcaodeprojetodeti\locacao\obj\Debug\view.csproj.GenerateResource.Cache
 C:\Users\aluno.unilasalle\Desktop\construcaodeprojetodeti\locacao\obj\Debug\locacao.exe
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\locacao.exe.config
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\Debug\locacao.exe
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\Debug\locacao.pdb
