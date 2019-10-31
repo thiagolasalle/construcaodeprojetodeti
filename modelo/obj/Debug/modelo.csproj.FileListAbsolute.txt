@@ -3,3 +3,8 @@ C:\Users\aluno.unilasalle\Desktop\construcaodeprojetodeti\modelo\bin\Debug\model
 C:\Users\aluno.unilasalle\Desktop\construcaodeprojetodeti\modelo\obj\Debug\modelo.csprojResolveAssemblyReference.cache
 C:\Users\aluno.unilasalle\Desktop\construcaodeprojetodeti\modelo\obj\Debug\modelo.dll
 C:\Users\aluno.unilasalle\Desktop\construcaodeprojetodeti\modelo\obj\Debug\modelo.pdb
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\modelo\bin\Debug\modelo.dll
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\modelo\bin\Debug\modelo.pdb
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\modelo\obj\Debug\Modelo.csprojResolveAssemblyReference.cache
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\modelo\obj\Debug\modelo.dll
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\modelo\obj\Debug\modelo.pdb
