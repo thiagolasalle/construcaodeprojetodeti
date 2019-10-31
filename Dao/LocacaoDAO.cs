@@ -9,29 +9,28 @@ using System.Data.SqlServerCe;
 
 namespace Dao
 {
-    class FuncionarioDAO
+    class LocacaoDAO
     {
-        
-        public List<Funcionario> ListarTodos()
+
+        public List<Locacao> ListarTodos()
         {
-            List<Funcionario> listaFuncionarios = new List<Funcionario>();
+            List<Locacao> listaLocacaos = new List<Locacao>();
             try
             {
-                String SQL = "SELECT * FROM funcionario;";
+                String SQL = "SELECT * FROM locacao;";
 
                 SqlCeDataReader data = BD.ExecutarSelect(SQL);
 
                 while (data.Read())
                 {
-                    Funcionario p = new Funcionario();
+                    Locacao p = new Locacao();
 
                     p.Id = data.GetInt64(0);
-                    p.Nome = data.GetString(1);
-                    p.Matricula = data.GetString(2);
-                    p.Senha = data.GetString(3);
-                    p.Sexo = data.GetString(4);
+                    p.DataLocacao = data.GetDateTime(1);
+                    p.DataEntrega = data.GetDateTime(2);
+                    p.Status = data.GetString(3);
 
-                    listaFuncionarios.Add(p);
+                    listaLocacaos.Add(p);
                 }
 
                 data.Close();
@@ -42,27 +41,26 @@ namespace Dao
                 throw new Exception(ex.Message);
             }
 
-            return listaFuncionarios;
+            return listaLocacaos;
         }
 
-        public Funcionario BuscarPorID(Int64 _id)
+        public Locacao BuscarPorID(Int64 _id)
         {
-            Funcionario p = null;
+            Locacao p = null;
             try
             {
-                String SQL = String.Format("SELECT * FROM funcionario WHERE id = {0} ", _id);
+                String SQL = String.Format("SELECT * FROM locacao WHERE id = {0} ", _id);
 
                 SqlCeDataReader data = BD.ExecutarSelect(SQL);
 
                 if (data.Read())
                 {
-                    p = new Funcionario();
+                    p = new Locacao();
 
                     p.Id = data.GetInt64(0);
-                    p.Nome = data.GetString(1);
-                    p.Matricula = data.GetString(2);
-                    p.Senha = data.GetString(3);
-                    p.Sexo = data.GetString(4);
+                    p.DataLocacao = data.GetDateTime(1);
+                    p.DataEntrega = data.GetDateTime(2);
+                    p.Status = data.GetString(3);
                 }
 
                 data.Close();
@@ -76,16 +74,15 @@ namespace Dao
             return p;
         }
 
-        public Boolean InserirBD(Funcionario _objeto)
+        public Boolean InserirBD(Locacao _objeto)
         {
             bool resultado = false;
             try
             {
-                String SQL = String.Format("INSERT INTO funcionario (nome, matricula, senha, sexo) VALUES ('{0}', '{1}', '{2}', '{3}')",
-                    _objeto.Nome,
-                    _objeto.Matricula,
-                    _objeto.Senha,
-                    _objeto.Sexo);
+                String SQL = String.Format("INSERT INTO locacao (data_locacao, data_entrega, status) VALUES ('{0}', '{1}', '{2}')",
+                    _objeto.DataLocacao,
+                    _objeto.DataEntrega,
+                    _objeto.Status);
 
                 int linhaAfetadas = BD.ExecutarIDU(SQL);
 
@@ -102,16 +99,15 @@ namespace Dao
             return resultado;
         }
 
-        public Boolean AlterarBD(Funcionario _objeto)
+        public Boolean AlterarBD(Locacao _objeto)
         {
             bool resultado = false;
             try
             {
-                String SQL = String.Format("UPDATE funcionario SET nome = '{0}', matricula = '{1}', senha = '{2}', sexo = '{3}' WHERE id = {4};",
-                    _objeto.Nome,
-                    _objeto.Matricula,
-                    _objeto.Senha,
-                    _objeto.Sexo,
+                String SQL = String.Format("UPDATE locacao SET data_locacao = '{0}', data_entrega = '{1}', status = '{2}' WHERE id = {3};",
+                    _objeto.DataLocacao,
+                    _objeto.DataEntrega,
+                    _objeto.Status,
                     _objeto.Id);
 
                 int linhaAfetadas = BD.ExecutarIDU(SQL);
@@ -134,7 +130,7 @@ namespace Dao
             bool resultado = false;
             try
             {
-                String SQL = String.Format("DELETE FROM funcionario WHERE id = {0};", _id);
+                String SQL = String.Format("DELETE FROM locacao WHERE id = {0};", _id);
 
                 int linhaAfetadas = BD.ExecutarIDU(SQL);
 

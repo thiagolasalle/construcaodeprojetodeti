@@ -9,29 +9,29 @@ using System.Data.SqlServerCe;
 
 namespace Dao
 {
-    class FuncionarioDAO
+    class VeiculoDAO
     {
-        
-        public List<Funcionario> ListarTodos()
+
+        public List<Veiculo> ListarTodos()
         {
-            List<Funcionario> listaFuncionarios = new List<Funcionario>();
+            List<Veiculo> listaVeiculos = new List<Veiculo>();
             try
             {
-                String SQL = "SELECT * FROM funcionario;";
+                String SQL = "SELECT * FROM veiculo;";
 
                 SqlCeDataReader data = BD.ExecutarSelect(SQL);
 
                 while (data.Read())
                 {
-                    Funcionario p = new Funcionario();
+                    Veiculo p = new Veiculo();
 
                     p.Id = data.GetInt64(0);
-                    p.Nome = data.GetString(1);
-                    p.Matricula = data.GetString(2);
-                    p.Senha = data.GetString(3);
-                    p.Sexo = data.GetString(4);
+                    p.Marca = data.GetString(1);
+                    p.Cor = data.GetString(2);
+                    p.Placa = data.GetString(3);
+                    p.status = data.GetString(4);
 
-                    listaFuncionarios.Add(p);
+                    listaVeiculos.Add(p);
                 }
 
                 data.Close();
@@ -42,27 +42,27 @@ namespace Dao
                 throw new Exception(ex.Message);
             }
 
-            return listaFuncionarios;
+            return listaVeiculos;
         }
 
-        public Funcionario BuscarPorID(Int64 _id)
+        public Veiculo BuscarPorID(Int64 _id)
         {
-            Funcionario p = null;
+            Veiculo p = null;
             try
             {
-                String SQL = String.Format("SELECT * FROM funcionario WHERE id = {0} ", _id);
+                String SQL = String.Format("SELECT * FROM veiculo WHERE id = {0} ", _id);
 
                 SqlCeDataReader data = BD.ExecutarSelect(SQL);
 
                 if (data.Read())
                 {
-                    p = new Funcionario();
+                    p = new Veiculo();
 
                     p.Id = data.GetInt64(0);
-                    p.Nome = data.GetString(1);
-                    p.Matricula = data.GetString(2);
-                    p.Senha = data.GetString(3);
-                    p.Sexo = data.GetString(4);
+                    p.Marca = data.GetString(1);
+                    p.Cor = data.GetString(2);
+                    p.Placa = data.GetString(3);
+                    p.status = data.GetString(4);
                 }
 
                 data.Close();
@@ -76,16 +76,16 @@ namespace Dao
             return p;
         }
 
-        public Boolean InserirBD(Funcionario _objeto)
+        public Boolean InserirBD(Veiculo _objeto)
         {
             bool resultado = false;
             try
             {
-                String SQL = String.Format("INSERT INTO funcionario (nome, matricula, senha, sexo) VALUES ('{0}', '{1}', '{2}', '{3}')",
-                    _objeto.Nome,
-                    _objeto.Matricula,
-                    _objeto.Senha,
-                    _objeto.Sexo);
+                String SQL = String.Format("INSERT INTO veiculo (marca, cor, placa, status) VALUES ('{0}', '{1}', '{2}', '{3}')",
+                    _objeto.Marca,
+                    _objeto.Cor,
+                    _objeto.Placa,
+                    _objeto.status);
 
                 int linhaAfetadas = BD.ExecutarIDU(SQL);
 
@@ -102,16 +102,16 @@ namespace Dao
             return resultado;
         }
 
-        public Boolean AlterarBD(Funcionario _objeto)
+        public Boolean AlterarBD(Veiculo _objeto)
         {
             bool resultado = false;
             try
             {
-                String SQL = String.Format("UPDATE funcionario SET nome = '{0}', matricula = '{1}', senha = '{2}', sexo = '{3}' WHERE id = {4};",
-                    _objeto.Nome,
-                    _objeto.Matricula,
-                    _objeto.Senha,
-                    _objeto.Sexo,
+                String SQL = String.Format("UPDATE veiculo SET marca = '{0}', cor = '{1}', placa = '{2}', status= '{3}' WHERE id = {4};",
+                    _objeto.Marca,
+                    _objeto.Cor,
+                    _objeto.Placa,
+                    _objeto.status,
                     _objeto.Id);
 
                 int linhaAfetadas = BD.ExecutarIDU(SQL);
@@ -134,7 +134,7 @@ namespace Dao
             bool resultado = false;
             try
             {
-                String SQL = String.Format("DELETE FROM funcionario WHERE id = {0};", _id);
+                String SQL = String.Format("DELETE FROM veiculo WHERE id = {0};", _id);
 
                 int linhaAfetadas = BD.ExecutarIDU(SQL);
 

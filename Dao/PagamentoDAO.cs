@@ -9,29 +9,27 @@ using System.Data.SqlServerCe;
 
 namespace Dao
 {
-    class FuncionarioDAO
+    class PagamentoDAO
     {
-        
-        public List<Funcionario> ListarTodos()
+
+        public List<Pagamento> ListarTodos()
         {
-            List<Funcionario> listaFuncionarios = new List<Funcionario>();
+            List<Pagamento> listaPagamentos = new List<Pagamento>();
             try
             {
-                String SQL = "SELECT * FROM funcionario;";
+                String SQL = "SELECT * FROM pagamento;";
 
                 SqlCeDataReader data = BD.ExecutarSelect(SQL);
 
                 while (data.Read())
                 {
-                    Funcionario p = new Funcionario();
+                    Pagamento p = new Pagamento();
 
                     p.Id = data.GetInt64(0);
-                    p.Nome = data.GetString(1);
-                    p.Matricula = data.GetString(2);
-                    p.Senha = data.GetString(3);
-                    p.Sexo = data.GetString(4);
+                    p.Valor = data.GetFloat(1);
+                    p.FormaPagamento = data.GetString(2);
 
-                    listaFuncionarios.Add(p);
+                    listaPagamentos.Add(p);
                 }
 
                 data.Close();
@@ -42,27 +40,25 @@ namespace Dao
                 throw new Exception(ex.Message);
             }
 
-            return listaFuncionarios;
+            return listaPagamentos;
         }
 
-        public Funcionario BuscarPorID(Int64 _id)
+        public Pagamento BuscarPorID(Int64 _id)
         {
-            Funcionario p = null;
+            Pagamento p = null;
             try
             {
-                String SQL = String.Format("SELECT * FROM funcionario WHERE id = {0} ", _id);
+                String SQL = String.Format("SELECT * FROM pagamento WHERE id = {0} ", _id);
 
                 SqlCeDataReader data = BD.ExecutarSelect(SQL);
 
                 if (data.Read())
                 {
-                    p = new Funcionario();
+                    p = new Pagamento();
 
                     p.Id = data.GetInt64(0);
-                    p.Nome = data.GetString(1);
-                    p.Matricula = data.GetString(2);
-                    p.Senha = data.GetString(3);
-                    p.Sexo = data.GetString(4);
+                    p.Valor = data.GetFloat(1);
+                    p.FormaPagamento = data.GetString(2);
                 }
 
                 data.Close();
@@ -76,16 +72,14 @@ namespace Dao
             return p;
         }
 
-        public Boolean InserirBD(Funcionario _objeto)
+        public Boolean InserirBD(Pagamento _objeto)
         {
             bool resultado = false;
             try
             {
-                String SQL = String.Format("INSERT INTO funcionario (nome, matricula, senha, sexo) VALUES ('{0}', '{1}', '{2}', '{3}')",
-                    _objeto.Nome,
-                    _objeto.Matricula,
-                    _objeto.Senha,
-                    _objeto.Sexo);
+                String SQL = String.Format("INSERT INTO pagamento (valor, forma_de_pagamento) VALUES ('{0}', '{1}')",
+                    _objeto.Valor,
+                    _objeto.FormaPagamento);
 
                 int linhaAfetadas = BD.ExecutarIDU(SQL);
 
@@ -102,16 +96,14 @@ namespace Dao
             return resultado;
         }
 
-        public Boolean AlterarBD(Funcionario _objeto)
+        public Boolean AlterarBD(Pagamento _objeto)
         {
             bool resultado = false;
             try
             {
-                String SQL = String.Format("UPDATE funcionario SET nome = '{0}', matricula = '{1}', senha = '{2}', sexo = '{3}' WHERE id = {4};",
-                    _objeto.Nome,
-                    _objeto.Matricula,
-                    _objeto.Senha,
-                    _objeto.Sexo,
+                String SQL = String.Format("UPDATE pagamento SET valor = '{0}', forma_de_pagamento = '{1}' WHERE id = {2};",
+                    _objeto.Valor,
+                    _objeto.FormaPagamento,
                     _objeto.Id);
 
                 int linhaAfetadas = BD.ExecutarIDU(SQL);
@@ -134,7 +126,7 @@ namespace Dao
             bool resultado = false;
             try
             {
-                String SQL = String.Format("DELETE FROM funcionario WHERE id = {0};", _id);
+                String SQL = String.Format("DELETE FROM pagamento WHERE id = {0};", _id);
 
                 int linhaAfetadas = BD.ExecutarIDU(SQL);
 

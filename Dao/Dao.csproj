@@ -44,8 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BD.cs" />
+    <Compile Include="ClienteDAO.cs" />
     <Compile Include="FuncionarioDAO.cs" />
+    <Compile Include="LocacaoDAO.cs" />
+    <Compile Include="PagamentoDAO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VeiculoDAO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\modelo\Modelo.csproj">
