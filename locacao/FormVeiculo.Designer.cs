@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBoxVeículos = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -42,9 +43,16 @@
             this.labelCpf = new System.Windows.Forms.Label();
             this.labelNome = new System.Windows.Forms.Label();
             this.textBoxMarca = new System.Windows.Forms.TextBox();
+            this.ColMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxVeículos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxDadosPrincipais.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxVeículos
@@ -59,11 +67,23 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColMarca,
+            this.ColCor,
+            this.ColPlaca,
+            this.ColStatus});
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Location = new System.Drawing.Point(10, 19);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(497, 232);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
             // buttonCancelar
             // 
@@ -83,6 +103,7 @@
             this.buttonAlterarCliente.TabIndex = 15;
             this.buttonAlterarCliente.Text = "Alterar";
             this.buttonAlterarCliente.UseVisualStyleBackColor = true;
+            this.buttonAlterarCliente.Click += new System.EventHandler(this.ButtonAlterarCliente_Click);
             // 
             // buttonCadastrarCliente
             // 
@@ -92,6 +113,7 @@
             this.buttonCadastrarCliente.TabIndex = 14;
             this.buttonCadastrarCliente.Text = "Cadastrar";
             this.buttonCadastrarCliente.UseVisualStyleBackColor = true;
+            this.buttonCadastrarCliente.Click += new System.EventHandler(this.ButtonCadastrarCliente_Click);
             // 
             // groupBoxDadosPrincipais
             // 
@@ -122,6 +144,7 @@
             this.comboBoxStatus.Name = "comboBoxStatus";
             this.comboBoxStatus.Size = new System.Drawing.Size(132, 21);
             this.comboBoxStatus.TabIndex = 10;
+            this.comboBoxStatus.SelectedIndexChanged += new System.EventHandler(this.ComboBoxStatus_SelectedIndexChanged);
             // 
             // labelStatus
             // 
@@ -180,6 +203,44 @@
             this.textBoxMarca.Size = new System.Drawing.Size(188, 20);
             this.textBoxMarca.TabIndex = 0;
             // 
+            // ColMarca
+            // 
+            this.ColMarca.HeaderText = "Marca";
+            this.ColMarca.Name = "ColMarca";
+            this.ColMarca.ReadOnly = true;
+            // 
+            // ColCor
+            // 
+            this.ColCor.HeaderText = "Cor";
+            this.ColCor.Name = "ColCor";
+            this.ColCor.ReadOnly = true;
+            // 
+            // ColPlaca
+            // 
+            this.ColPlaca.HeaderText = "Placa";
+            this.ColPlaca.Name = "ColPlaca";
+            this.ColPlaca.ReadOnly = true;
+            // 
+            // ColStatus
+            // 
+            this.ColStatus.HeaderText = "Status";
+            this.ColStatus.Name = "ColStatus";
+            this.ColStatus.ReadOnly = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.excluirToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.excluirToolStripMenuItem.Text = "Excluir";
+            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.ExcluirToolStripMenuItem_Click);
+            // 
             // FormVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,10 +254,12 @@
             this.Name = "FormVeiculo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Veículo";
+            this.Load += new System.EventHandler(this.FormVeiculo_Load);
             this.groupBoxVeículos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBoxDadosPrincipais.ResumeLayout(false);
             this.groupBoxDadosPrincipais.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -217,5 +280,11 @@
         private System.Windows.Forms.TextBox textBoxCor;
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMarca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColPlaca;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColStatus;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
     }
 }

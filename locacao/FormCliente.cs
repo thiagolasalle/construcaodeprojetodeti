@@ -50,7 +50,7 @@ namespace locacao
 
                 if (teste)
                 {
-                    MessageBox.Show("Cliente cadastrada com sucesso!");
+                    MessageBox.Show("Cliente cadastrado com sucesso!");
                     CarregarMapaClientes();
                 }
             }
@@ -65,7 +65,6 @@ namespace locacao
         {
             try
             {
-                
                 p.Nome = textBoxNome.Text;
                 p.Cpf = textBoxCpf.Text;
                 p.Endereco = textBoxEndereco.Text;
@@ -80,9 +79,7 @@ namespace locacao
                 }
                 
                 p.Deficiencia = checkBoxDeficiencia.Checked;
-
                 p.IdadeDeRisco = checkBoxIdadeDeRisco.Checked;
-
             }
             catch (Exception ex)
             {
@@ -113,8 +110,6 @@ namespace locacao
             {
                 MessageBox.Show("ERRO AO alterar o Cliente: " + ex.Message);
             }
-
-
         }
 
         private void ButtonCancelar_Click(object sender, EventArgs e)
@@ -157,7 +152,6 @@ namespace locacao
             try
             {
                 Int64 idPessoa = Convert.ToInt64(dataGridView1.SelectedRows[0].Cells[0].Value);
-
                 p.Id = idPessoa;
 
                 ClienteController control = new ClienteController();
@@ -165,16 +159,6 @@ namespace locacao
                 Cliente cliente = (Cliente)control.ExecutarOpBD('o', p);
 
                 CarregarFormDeCliente(cliente);
-
-                /*
-                Pessoa p = mapaPessoas[idPessoa];
-
-                frmCadPessoa form = new frmCadPessoa();
-
-                form.Tag = p;
-
-                form.ShowDialog();
-                 * */
             }
             catch (Exception ex)
             {
@@ -186,8 +170,6 @@ namespace locacao
         {
             try
             {
-
-
                 textBoxNome.Text = p.Nome;
                 textBoxCpf.Text = p.Cpf;
                 textBoxEndereco.Text = p.Endereco;
@@ -224,10 +206,10 @@ namespace locacao
             }
         }
 
-        private void excluir_Click(object sender, EventArgs e)
+        /*private void excluir_Click(object sender, EventArgs e)
         {
             Cliente cliente = CarregarClienteDoForm();
-        }
+        }*/
 
         private void excluirToolStripMenuItem_Click(object sender, EventArgs e)
         {

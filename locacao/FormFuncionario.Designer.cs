@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBoxFuncionarios = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.buttonCancelar = new System.Windows.Forms.Button();
@@ -42,11 +43,21 @@
             this.labelCpf = new System.Windows.Forms.Label();
             this.labelNome = new System.Windows.Forms.Label();
             this.textBoxNome = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deletarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColMatricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSenha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxFuncionarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxDadosComplementares.SuspendLayout();
             this.groupBoxSexo.SuspendLayout();
             this.groupBoxDadosPrincipais.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxFuncionarios
@@ -61,11 +72,24 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColId,
+            this.ColNome,
+            this.ColMatricula,
+            this.ColSenha,
+            this.ColSexo});
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Location = new System.Drawing.Point(10, 19);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(497, 337);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             // 
             // buttonCancelar
             // 
@@ -85,6 +109,7 @@
             this.buttonAlterarFuncionario.TabIndex = 15;
             this.buttonAlterarFuncionario.Text = "Alterar";
             this.buttonAlterarFuncionario.UseVisualStyleBackColor = true;
+            this.buttonAlterarFuncionario.Click += new System.EventHandler(this.ButtonAlterarFuncionario_Click);
             // 
             // buttonCadastrarFuncionario
             // 
@@ -94,11 +119,12 @@
             this.buttonCadastrarFuncionario.TabIndex = 14;
             this.buttonCadastrarFuncionario.Text = "Cadastrar";
             this.buttonCadastrarFuncionario.UseVisualStyleBackColor = true;
+            this.buttonCadastrarFuncionario.Click += new System.EventHandler(this.ButtonCadastrarFuncionario_Click);
             // 
             // groupBoxDadosComplementares
             // 
             this.groupBoxDadosComplementares.Controls.Add(this.groupBoxSexo);
-            this.groupBoxDadosComplementares.Location = new System.Drawing.Point(540, 128);
+            this.groupBoxDadosComplementares.Location = new System.Drawing.Point(541, 180);
             this.groupBoxDadosComplementares.Name = "groupBoxDadosComplementares";
             this.groupBoxDadosComplementares.Size = new System.Drawing.Size(390, 151);
             this.groupBoxDadosComplementares.TabIndex = 13;
@@ -137,16 +163,19 @@
             this.radioButtonMasculino.TabStop = true;
             this.radioButtonMasculino.Text = "Masculino";
             this.radioButtonMasculino.UseVisualStyleBackColor = true;
+            this.radioButtonMasculino.CheckedChanged += new System.EventHandler(this.RadioButtonMasculino_CheckedChanged);
             // 
             // groupBoxDadosPrincipais
             // 
+            this.groupBoxDadosPrincipais.Controls.Add(this.textBox1);
+            this.groupBoxDadosPrincipais.Controls.Add(this.label1);
             this.groupBoxDadosPrincipais.Controls.Add(this.textBoxMatricula);
             this.groupBoxDadosPrincipais.Controls.Add(this.labelCpf);
             this.groupBoxDadosPrincipais.Controls.Add(this.labelNome);
             this.groupBoxDadosPrincipais.Controls.Add(this.textBoxNome);
             this.groupBoxDadosPrincipais.Location = new System.Drawing.Point(540, 12);
             this.groupBoxDadosPrincipais.Name = "groupBoxDadosPrincipais";
-            this.groupBoxDadosPrincipais.Size = new System.Drawing.Size(390, 100);
+            this.groupBoxDadosPrincipais.Size = new System.Drawing.Size(390, 162);
             this.groupBoxDadosPrincipais.TabIndex = 11;
             this.groupBoxDadosPrincipais.TabStop = false;
             this.groupBoxDadosPrincipais.Text = "Dados Principais";
@@ -183,6 +212,67 @@
             this.textBoxNome.Size = new System.Drawing.Size(303, 20);
             this.textBoxNome.TabIndex = 0;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(68, 106);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(194, 20);
+            this.textBox1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 113);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Senha:";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deletarToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // deletarToolStripMenuItem
+            // 
+            this.deletarToolStripMenuItem.Name = "deletarToolStripMenuItem";
+            this.deletarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deletarToolStripMenuItem.Text = "Deletar";
+            this.deletarToolStripMenuItem.Click += new System.EventHandler(this.DeletarToolStripMenuItem_Click);
+            // 
+            // ColId
+            // 
+            this.ColId.HeaderText = "Id";
+            this.ColId.Name = "ColId";
+            this.ColId.ReadOnly = true;
+            // 
+            // ColNome
+            // 
+            this.ColNome.HeaderText = "Nome";
+            this.ColNome.Name = "ColNome";
+            this.ColNome.ReadOnly = true;
+            // 
+            // ColMatricula
+            // 
+            this.ColMatricula.HeaderText = "Matricula";
+            this.ColMatricula.Name = "ColMatricula";
+            this.ColMatricula.ReadOnly = true;
+            // 
+            // ColSenha
+            // 
+            this.ColSenha.HeaderText = "Senha";
+            this.ColSenha.Name = "ColSenha";
+            this.ColSenha.ReadOnly = true;
+            // 
+            // ColSexo
+            // 
+            this.ColSexo.HeaderText = "Sexo";
+            this.ColSexo.Name = "ColSexo";
+            this.ColSexo.ReadOnly = true;
+            // 
             // FormFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -205,6 +295,7 @@
             this.groupBoxSexo.PerformLayout();
             this.groupBoxDadosPrincipais.ResumeLayout(false);
             this.groupBoxDadosPrincipais.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -225,5 +316,14 @@
         private System.Windows.Forms.Label labelNome;
         private System.Windows.Forms.TextBox textBoxNome;
         private System.Windows.Forms.TextBox textBoxMatricula;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem deletarToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColMatricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSenha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSexo;
     }
 }
