@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBoxDadosPrincipais = new System.Windows.Forms.GroupBox();
             this.textBoxCpf = new System.Windows.Forms.TextBox();
             this.labelEndereco = new System.Windows.Forms.Label();
@@ -47,12 +48,22 @@
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.groupBoxClientes = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColEndereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDeficiencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColIdadeDeRisco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxDadosPrincipais.SuspendLayout();
             this.groupBoxDadosComplementares.SuspendLayout();
             this.groupBoxExtras.SuspendLayout();
             this.groupBoxSexo.SuspendLayout();
             this.groupBoxClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxDadosPrincipais
@@ -69,7 +80,6 @@
             this.groupBoxDadosPrincipais.TabIndex = 0;
             this.groupBoxDadosPrincipais.TabStop = false;
             this.groupBoxDadosPrincipais.Text = "Dados Principais";
-            this.groupBoxDadosPrincipais.Enter += new System.EventHandler(this.GroupBox1_Enter);
             // 
             // textBoxCpf
             // 
@@ -86,7 +96,6 @@
             this.labelEndereco.Size = new System.Drawing.Size(56, 13);
             this.labelEndereco.TabIndex = 6;
             this.labelEndereco.Text = "Endereço:";
-            this.labelEndereco.Click += new System.EventHandler(this.Label1_Click_1);
             // 
             // textBoxEndereco
             // 
@@ -94,7 +103,6 @@
             this.textBoxEndereco.Name = "textBoxEndereco";
             this.textBoxEndereco.Size = new System.Drawing.Size(303, 20);
             this.textBoxEndereco.TabIndex = 5;
-            this.textBoxEndereco.TextChanged += new System.EventHandler(this.TextBox1_TextChanged_1);
             // 
             // labelCpf
             // 
@@ -113,7 +121,6 @@
             this.labelNome.Size = new System.Drawing.Size(38, 13);
             this.labelNome.TabIndex = 1;
             this.labelNome.Text = "Nome:";
-            this.labelNome.Click += new System.EventHandler(this.Label1_Click);
             // 
             // textBoxNome
             // 
@@ -121,7 +128,6 @@
             this.textBoxNome.Name = "textBoxNome";
             this.textBoxNome.Size = new System.Drawing.Size(303, 20);
             this.textBoxNome.TabIndex = 0;
-            this.textBoxNome.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // groupBoxDadosComplementares
             // 
@@ -154,6 +160,7 @@
             this.checkBoxIdadeDeRisco.TabIndex = 1;
             this.checkBoxIdadeDeRisco.Text = "Idade de Risco";
             this.checkBoxIdadeDeRisco.UseVisualStyleBackColor = true;
+            this.checkBoxIdadeDeRisco.CheckedChanged += new System.EventHandler(this.checkBoxIdadeDeRisco_CheckedChanged);
             // 
             // checkBoxDeficiencia
             // 
@@ -164,6 +171,7 @@
             this.checkBoxDeficiencia.TabIndex = 0;
             this.checkBoxDeficiencia.Text = "Deficiência";
             this.checkBoxDeficiencia.UseVisualStyleBackColor = true;
+            this.checkBoxDeficiencia.CheckedChanged += new System.EventHandler(this.checkBoxDeficiencia_CheckedChanged);
             // 
             // groupBoxSexo
             // 
@@ -186,7 +194,7 @@
             this.radioButtonFeminino.TabStop = true;
             this.radioButtonFeminino.Text = "Feminino";
             this.radioButtonFeminino.UseVisualStyleBackColor = true;
-            this.radioButtonFeminino.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
+            this.radioButtonFeminino.CheckedChanged += new System.EventHandler(this.radioButtonFeminino_CheckedChanged);
             // 
             // radioButtonMasculino
             // 
@@ -198,6 +206,7 @@
             this.radioButtonMasculino.TabStop = true;
             this.radioButtonMasculino.Text = "Masculino";
             this.radioButtonMasculino.UseVisualStyleBackColor = true;
+            this.radioButtonMasculino.CheckedChanged += new System.EventHandler(this.radioButtonMasculino_CheckedChanged);
             // 
             // buttonCadastrarCliente
             // 
@@ -241,11 +250,82 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColId,
+            this.ColNome,
+            this.ColCpf,
+            this.ColEndereco,
+            this.ColSexo,
+            this.ColDeficiencia,
+            this.ColIdadeDeRisco});
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Location = new System.Drawing.Point(10, 19);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(497, 337);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // ColId
+            // 
+            this.ColId.HeaderText = "Id";
+            this.ColId.Name = "ColId";
+            this.ColId.ReadOnly = true;
+            // 
+            // ColNome
+            // 
+            this.ColNome.HeaderText = "Nome";
+            this.ColNome.Name = "ColNome";
+            this.ColNome.ReadOnly = true;
+            // 
+            // ColCpf
+            // 
+            this.ColCpf.HeaderText = "Cpf";
+            this.ColCpf.Name = "ColCpf";
+            this.ColCpf.ReadOnly = true;
+            // 
+            // ColEndereco
+            // 
+            this.ColEndereco.HeaderText = "Endereço";
+            this.ColEndereco.Name = "ColEndereco";
+            this.ColEndereco.ReadOnly = true;
+            // 
+            // ColSexo
+            // 
+            this.ColSexo.HeaderText = "Sexo";
+            this.ColSexo.Name = "ColSexo";
+            this.ColSexo.ReadOnly = true;
+            // 
+            // ColDeficiencia
+            // 
+            this.ColDeficiencia.HeaderText = "Deficiencia";
+            this.ColDeficiencia.Name = "ColDeficiencia";
+            this.ColDeficiencia.ReadOnly = true;
+            // 
+            // ColIdadeDeRisco
+            // 
+            this.ColIdadeDeRisco.HeaderText = "Idade de Risco";
+            this.ColIdadeDeRisco.Name = "ColIdadeDeRisco";
+            this.ColIdadeDeRisco.ReadOnly = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.excluirToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 26);
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(108, 22);
+            this.excluirToolStripMenuItem.Text = "excluir";
+            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.excluirToolStripMenuItem_Click);
             // 
             // FormCliente
             // 
@@ -261,6 +341,7 @@
             this.Name = "FormCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cliente";
+            this.Load += new System.EventHandler(this.FormCliente_Load);
             this.groupBoxDadosPrincipais.ResumeLayout(false);
             this.groupBoxDadosPrincipais.PerformLayout();
             this.groupBoxDadosComplementares.ResumeLayout(false);
@@ -270,6 +351,7 @@
             this.groupBoxSexo.PerformLayout();
             this.groupBoxClientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -295,5 +377,14 @@
         private System.Windows.Forms.GroupBox groupBoxClientes;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBoxCpf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColCpf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColEndereco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColSexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDeficiencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColIdadeDeRisco;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
     }
 }

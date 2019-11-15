@@ -44,13 +44,15 @@ C:\Users\aluno.unilasalle\Desktop\construcaodeprojetodeti\locacao\obj\Debug\loca
 C:\Users\aluno.unilasalle\Desktop\construcaodeprojetodeti\locacao\obj\Debug\view.csproj.GenerateResource.Cache
 C:\Users\aluno.unilasalle\Desktop\construcaodeprojetodeti\locacao\obj\Debug\locacao.exe
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\locacao.exe.config
-C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\Debug\locacao.exe
-C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\Debug\locacao.pdb
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\locacao.exe
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\locacao.pdb
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\Controle.dll
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\modelo.dll
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\mscorlib.dll
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\Dao.dll
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\Controle.pdb
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\modelo.pdb
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\Dao.pdb
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\pt-BR\mscorlib.resources.dll
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\normidna.nlp
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\bin\Debug\normnfc.nlp
@@ -68,3 +70,5 @@ C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\Debug\locacao.FormVeiculo.resources
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\Debug\locacao.Properties.Resources.resources
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\Debug\view.csproj.GenerateResource.Cache
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\Debug\locacao.exe
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\Debug\locacao.pdb

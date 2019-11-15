@@ -9,7 +9,7 @@ using System.Data.SqlServerCe;
 
 namespace Dao
 {
-    class ClienteDAO
+    public class ClienteDAO
     {
         
         public List<Cliente> ListarTodos()
@@ -65,8 +65,8 @@ namespace Dao
                     p.Cpf = data.GetString(2);
                     p.Endereco = data.GetString(3);
                     p.Sexo = data.GetString(4);
-                    p.Deficiencia = data.GetString(5);
-                    p.IdadeDeRisco = data.GetString(6);
+                    p.Deficiencia = data.GetBoolean(5);
+                    p.IdadeDeRisco = data.GetBoolean(6);
                 }
 
                 data.Close();

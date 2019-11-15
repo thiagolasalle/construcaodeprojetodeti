@@ -1,0 +1,7 @@
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Dao\bin\Debug\Dao.dll
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Dao\bin\Debug\Dao.pdb
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Dao\bin\Debug\modelo.dll
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Dao\bin\Debug\modelo.pdb
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Dao\obj\Debug\Dao.csprojResolveAssemblyReference.cache
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Dao\obj\Debug\Dao.dll
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Dao\obj\Debug\Dao.pdb

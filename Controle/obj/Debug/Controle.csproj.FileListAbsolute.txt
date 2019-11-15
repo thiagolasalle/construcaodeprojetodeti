@@ -1,0 +1,9 @@
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\bin\Debug\Controle.dll
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\bin\Debug\Controle.pdb
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\bin\Debug\Dao.dll
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\bin\Debug\modelo.dll
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\bin\Debug\Dao.pdb
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\bin\Debug\modelo.pdb
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\obj\Debug\Controle.csprojResolveAssemblyReference.cache
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\obj\Debug\Controle.dll
+C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\obj\Debug\Controle.pdb

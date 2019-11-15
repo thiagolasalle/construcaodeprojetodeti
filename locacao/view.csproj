@@ -153,6 +153,10 @@
     <None Include="Resources\50-Beautiful-and-Minimalist-Presentation-Backgrounds-07.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Controle\Controle.csproj">
+      <Project>{b3381b82-b349-4de8-8668-546f80c9d8a3}</Project>
+      <Name>Controle</Name>
+    </ProjectReference>
     <ProjectReference Include="..\modelo\Modelo.csproj">
       <Project>{f01d103c-c27c-48e3-9a27-d3cd73a1e717}</Project>
       <Name>Modelo</Name>
