@@ -28,8 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBoxClientes = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDataLocacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColDataEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAlterarCliente = new System.Windows.Forms.Button();
             this.buttonCadastrarCliente = new System.Windows.Forms.Button();
@@ -52,10 +57,13 @@
             this.textBoxValor = new System.Windows.Forms.TextBox();
             this.textBoxForma = new System.Windows.Forms.TextBox();
             this.buttonAdcPagamento = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxClientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBoxDadosPrincipais.SuspendLayout();
             this.groupBoxPagamento.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxClientes
@@ -70,12 +78,48 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColId,
+            this.ColDataLocacao,
+            this.ColDataEntrega,
+            this.ColStatus});
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Location = new System.Drawing.Point(6, 19);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(501, 468);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            // 
+            // ColId
+            // 
+            this.ColId.HeaderText = "Id";
+            this.ColId.Name = "ColId";
+            this.ColId.ReadOnly = true;
+            // 
+            // ColDataLocacao
+            // 
+            this.ColDataLocacao.HeaderText = "Data Locacao";
+            this.ColDataLocacao.Name = "ColDataLocacao";
+            this.ColDataLocacao.ReadOnly = true;
+            // 
+            // ColDataEntrega
+            // 
+            this.ColDataEntrega.HeaderText = "Data Entrega";
+            this.ColDataEntrega.Name = "ColDataEntrega";
+            this.ColDataEntrega.ReadOnly = true;
+            // 
+            // ColStatus
+            // 
+            this.ColStatus.HeaderText = "Status";
+            this.ColStatus.Name = "ColStatus";
+            this.ColStatus.ReadOnly = true;
             // 
             // buttonCancelar
             // 
@@ -95,6 +139,7 @@
             this.buttonAlterarCliente.TabIndex = 15;
             this.buttonAlterarCliente.Text = "Alterar";
             this.buttonAlterarCliente.UseVisualStyleBackColor = true;
+            this.buttonAlterarCliente.Click += new System.EventHandler(this.ButtonAlterarCliente_Click);
             // 
             // buttonCadastrarCliente
             // 
@@ -104,6 +149,7 @@
             this.buttonCadastrarCliente.TabIndex = 14;
             this.buttonCadastrarCliente.Text = "Cadastrar";
             this.buttonCadastrarCliente.UseVisualStyleBackColor = true;
+            this.buttonCadastrarCliente.Click += new System.EventHandler(this.ButtonCadastrarCliente_Click);
             // 
             // groupBoxDadosPrincipais
             // 
@@ -153,6 +199,7 @@
             this.maskedTextBoxDataLocacao.Size = new System.Drawing.Size(77, 20);
             this.maskedTextBoxDataLocacao.TabIndex = 15;
             this.maskedTextBoxDataLocacao.ValidatingType = typeof(System.DateTime);
+            this.maskedTextBoxDataLocacao.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.MaskedTextBoxDataLocacao_MaskInputRejected);
             // 
             // labelDataLocacao
             // 
@@ -197,6 +244,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(147, 21);
             this.comboBox1.TabIndex = 8;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // comboBoxLocacaoCliente
             // 
@@ -301,6 +349,20 @@
             this.buttonAdcPagamento.UseVisualStyleBackColor = true;
             this.buttonAdcPagamento.Click += new System.EventHandler(this.ButtonAdcPagamento_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.excluirToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(110, 26);
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.excluirToolStripMenuItem.Text = "Excluir";
+            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.ExcluirToolStripMenuItem_Click_1);
+            // 
             // FormLocacao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,12 +377,14 @@
             this.Name = "FormLocacao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Locação";
+            this.Load += new System.EventHandler(this.FormLocacao_Load);
             this.groupBoxClientes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBoxDadosPrincipais.ResumeLayout(false);
             this.groupBoxDadosPrincipais.PerformLayout();
             this.groupBoxPagamento.ResumeLayout(false);
             this.groupBoxPagamento.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -351,5 +415,11 @@
         private System.Windows.Forms.Label labelForma;
         private System.Windows.Forms.Label labelValor;
         private System.Windows.Forms.TextBox textBoxValor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDataLocacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColDataEntrega;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColStatus;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
     }
 }

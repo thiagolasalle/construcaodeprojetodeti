@@ -7,3 +7,9 @@ C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\modelo\bin\D
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\modelo\bin\Debug\modelo.pdb
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\modelo\obj\Debug\modelo.dll
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\modelo\obj\Debug\modelo.pdb
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\modelo\bin\Debug\modelo.dll
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\modelo\bin\Debug\modelo.pdb
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\modelo\obj\Debug\Modelo.csprojAssemblyReference.cache
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\modelo\obj\Debug\Modelo.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\modelo\obj\Debug\modelo.dll
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\modelo\obj\Debug\modelo.pdb

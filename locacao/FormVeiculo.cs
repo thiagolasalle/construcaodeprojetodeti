@@ -160,5 +160,10 @@ namespace locacao
 
             CarregarMapaVeiculos();
         }
+
+        private void TextBoxPlaca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

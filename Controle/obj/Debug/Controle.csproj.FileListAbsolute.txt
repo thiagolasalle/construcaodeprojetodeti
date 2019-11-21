@@ -7,3 +7,14 @@ C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\bin
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\obj\Debug\Controle.csprojResolveAssemblyReference.cache
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\obj\Debug\Controle.dll
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\Controle\obj\Debug\Controle.pdb
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\Controle\bin\Debug\Controle.dll
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\Controle\bin\Debug\Controle.pdb
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\Controle\bin\Debug\Dao.dll
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\Controle\bin\Debug\modelo.dll
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\Controle\bin\Debug\Dao.pdb
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\Controle\bin\Debug\modelo.pdb
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\Controle\obj\Debug\Controle.csprojAssemblyReference.cache
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\Controle\obj\Debug\Controle.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\Controle\obj\Debug\Controle.csproj.CopyComplete
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\Controle\obj\Debug\Controle.dll
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\Controle\obj\Debug\Controle.pdb

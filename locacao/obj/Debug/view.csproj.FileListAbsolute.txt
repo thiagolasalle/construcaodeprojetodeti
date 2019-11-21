@@ -72,3 +72,27 @@ C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\Debug\view.csproj.GenerateResource.Cache
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\Debug\locacao.exe
 C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\locacao\obj\Debug\locacao.pdb
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\bin\Debug\locacao.exe.config
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\bin\Debug\locacao.exe
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\bin\Debug\locacao.pdb
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\bin\Debug\Controle.dll
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\bin\Debug\modelo.dll
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\bin\Debug\Dao.dll
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\bin\Debug\Controle.pdb
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\bin\Debug\modelo.pdb
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\bin\Debug\Dao.pdb
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\view.csprojAssemblyReference.cache
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\locacao.FormCliente.resources
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\locacao.FormFuncionario.resources
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\locacao.FormLocacao.resources
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\locacao.FormLogin.resources
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\locacao.FormPagamento.resources
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\locacao.FormPrincipal.resources
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\locacao.FormSobre.resources
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\locacao.FormVeiculo.resources
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\locacao.Properties.Resources.resources
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\view.csproj.GenerateResource.cache
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\view.csproj.CoreCompileInputs.cache
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\view.csproj.CopyComplete
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\locacao.exe
+C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\locacao\obj\Debug\locacao.pdb

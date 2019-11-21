@@ -28,8 +28,8 @@ namespace Dao
                     p.Id = data.GetInt64(0);
                     p.Marca = data.GetString(1);
                     p.Cor = data.GetString(2);
-                    p.Placa = data.GetString(3);
-                    p.status = data.GetString(4);
+                    p.status = data.GetString(3);
+                    p.Placa = data.GetString(4);
 
                     listaVeiculos.Add(p);
                 }
@@ -61,8 +61,8 @@ namespace Dao
                     p.Id = data.GetInt64(0);
                     p.Marca = data.GetString(1);
                     p.Cor = data.GetString(2);
-                    p.Placa = data.GetString(3);
-                    p.status = data.GetString(4);
+                    p.status = data.GetString(3);
+                    p.Placa = data.GetString(4);
                 }
 
                 data.Close();
@@ -81,11 +81,11 @@ namespace Dao
             bool resultado = false;
             try
             {
-                String SQL = String.Format("INSERT INTO veiculo (marca, cor, placa, status) VALUES ('{0}', '{1}', '{2}', '{3}')",
+                String SQL = String.Format("INSERT INTO veiculo (marca, cor, status, placa) VALUES ('{0}', '{1}', '{2}', '{3}')",
                     _objeto.Marca,
                     _objeto.Cor,
-                    _objeto.Placa,
-                    _objeto.status);
+                    _objeto.status,
+                    _objeto.Placa);
 
                 int linhaAfetadas = BD.ExecutarIDU(SQL);
 
@@ -107,11 +107,11 @@ namespace Dao
             bool resultado = false;
             try
             {
-                String SQL = String.Format("UPDATE veiculo SET marca = '{0}', cor = '{1}', placa = '{2}', status= '{3}' WHERE id = {4};",
+                String SQL = String.Format("UPDATE veiculo SET marca = '{0}', cor = '{1}', status= '{2}', placa = '{3}' WHERE id = {4};",
                     _objeto.Marca,
                     _objeto.Cor,
-                    _objeto.Placa,
                     _objeto.status,
+                    _objeto.Placa,
                     _objeto.Id);
 
                 int linhaAfetadas = BD.ExecutarIDU(SQL);

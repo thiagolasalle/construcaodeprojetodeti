@@ -9,7 +9,7 @@ using System.Data.SqlServerCe;
 
 namespace Dao
 {
-    class LocacaoDAO
+    public class LocacaoDAO
     {
 
         public List<Locacao> ListarTodos()

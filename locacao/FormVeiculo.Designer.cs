@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.groupBoxVeículos = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buttonCancelar = new System.Windows.Forms.Button();
             this.buttonAlterarCliente = new System.Windows.Forms.Button();
             this.buttonCadastrarCliente = new System.Windows.Forms.Button();
@@ -43,16 +45,15 @@
             this.labelCpf = new System.Windows.Forms.Label();
             this.labelNome = new System.Windows.Forms.Label();
             this.textBoxMarca = new System.Windows.Forms.TextBox();
+            this.ColId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColMarca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColCor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColPlaca = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxVeículos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBoxDadosPrincipais.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.groupBoxDadosPrincipais.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxVeículos
@@ -71,6 +72,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColId,
             this.ColMarca,
             this.ColCor,
             this.ColPlaca,
@@ -84,6 +86,20 @@
             this.dataGridView1.Size = new System.Drawing.Size(497, 232);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.excluirToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(110, 26);
+            // 
+            // excluirToolStripMenuItem
+            // 
+            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
+            this.excluirToolStripMenuItem.Text = "Excluir";
+            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.ExcluirToolStripMenuItem_Click);
             // 
             // buttonCancelar
             // 
@@ -177,6 +193,7 @@
             this.textBoxPlaca.Name = "textBoxPlaca";
             this.textBoxPlaca.Size = new System.Drawing.Size(132, 20);
             this.textBoxPlaca.TabIndex = 5;
+            this.textBoxPlaca.TextChanged += new System.EventHandler(this.TextBoxPlaca_TextChanged);
             // 
             // labelCpf
             // 
@@ -203,6 +220,12 @@
             this.textBoxMarca.Size = new System.Drawing.Size(188, 20);
             this.textBoxMarca.TabIndex = 0;
             // 
+            // ColId
+            // 
+            this.ColId.HeaderText = "Id";
+            this.ColId.Name = "ColId";
+            this.ColId.ReadOnly = true;
+            // 
             // ColMarca
             // 
             this.ColMarca.HeaderText = "Marca";
@@ -227,20 +250,6 @@
             this.ColStatus.Name = "ColStatus";
             this.ColStatus.ReadOnly = true;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.excluirToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
-            // 
-            // excluirToolStripMenuItem
-            // 
-            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.excluirToolStripMenuItem.Text = "Excluir";
-            this.excluirToolStripMenuItem.Click += new System.EventHandler(this.ExcluirToolStripMenuItem_Click);
-            // 
             // FormVeiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,9 +266,9 @@
             this.Load += new System.EventHandler(this.FormVeiculo_Load);
             this.groupBoxVeículos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.groupBoxDadosPrincipais.ResumeLayout(false);
             this.groupBoxDadosPrincipais.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -280,11 +289,12 @@
         private System.Windows.Forms.TextBox textBoxCor;
         private System.Windows.Forms.ComboBox comboBoxStatus;
         private System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColCor;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColPlaca;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColStatus;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
     }
 }

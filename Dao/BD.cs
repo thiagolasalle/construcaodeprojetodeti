@@ -10,7 +10,7 @@ namespace Dao
 {
     public class BD
     {
-        static String strConn = @"Data Source=C:\Users\aluno.unilasalle\Documents\thiagog\construcaodeprojetodeti\MyDatabase#1.sdf;Password=admin;Persist Security Info=True";
+        static String strConn = @"Data Source=C:\Users\Thiago\Desktop\faculdade trabalhos\Construção de projeto de TI\locacao\MyDatabase#1.sdf;Password=admin;Persist Security Info=True";
         static SqlCeConnection conexao = null;
 
         public static void AbrirConexao()
